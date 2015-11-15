@@ -21,7 +21,7 @@ module app2 {
 
 			// Trigger a collection filter event, causing hiding/unhiding
 			// of Todo view items
-			app.todos.trigger('filter');
+			app2.todos.trigger('filter');
 		}
 	}
 
