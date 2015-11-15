@@ -11,7 +11,7 @@ var app = app || {};
 	// server.
 	var Todos = Backbone.Collection.extend({
 		// Reference to this collection's model.
-		model: app.Todo,
+		model: app2.Todo,
 
 		// Save all of the todo items under this example's namespace.
 		localStorage: new Backbone.LocalStorage('todos-backbone'),
