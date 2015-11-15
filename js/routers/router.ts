@@ -1,17 +1,21 @@
 /*global Backbone */
 var app = app || {};
 
-(function () {
+module app2 {
 	'use strict';
 
 	// Todo Router
 	// ----------
-	var TodoRouter = Backbone.Router.extend({
-		routes: {
+	class TodoRouter extends Backbone.Router {
+		
+		constructor(){
+			this.routes = {
 			'*filter': 'setFilter'
-		},
-
-		setFilter: function (param) {
+			}
+			super();
+		}
+		
+		setFilter(param) {
 			// Set the current filter to be used
 			app.TodoFilter = param || '';
 
@@ -19,8 +23,8 @@ var app = app || {};
 			// of Todo view items
 			app.todos.trigger('filter');
 		}
-	});
+	}
 
 	app.TodoRouter = new TodoRouter();
 	Backbone.history.start();
-})();
+}
