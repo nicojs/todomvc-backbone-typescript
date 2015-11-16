@@ -7,7 +7,7 @@ module app2 {
 	// ----------
 
 	// Our basic **Todo** model has `title`, `order`, and `completed` attributes.
-	export class Todo extends Backbone.Model {
+	export class Todo extends Backbone.LocalStorageEnabledModel {
 
 		// Default attributes for the todo
 		// and ensure that each todo created has `title` and `completed` keys.
