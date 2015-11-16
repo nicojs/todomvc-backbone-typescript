@@ -68,8 +68,8 @@ module app2 {
 
 		isHidden() {
 			return this.model.get('completed') ?
-				app.TodoFilter === 'active' :
-				app.TodoFilter === 'completed';
+				app2.todoFilter === 'active' :
+				app2.todoFilter === 'completed';
 		}
 
 		// Toggle the `"completed"` state of the model.

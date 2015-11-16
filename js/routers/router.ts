@@ -1,5 +1,4 @@
 /*global Backbone */
-var app = app || {};
 
 module app2 {
 	'use strict';
@@ -15,16 +14,18 @@ module app2 {
 			super();
 		}
 		
-		setFilter(param) {
+		setFilter(param: string) {
 			// Set the current filter to be used
-			app.TodoFilter = param || '';
+			todoFilter = param || '';
 
 			// Trigger a collection filter event, causing hiding/unhiding
 			// of Todo view items
 			app2.todos.trigger('filter');
 		}
 	}
+	
+	export var todoFilter: string;
+	export var todoRouter = new TodoRouter();
 
-	app.TodoRouter = new TodoRouter();
 	Backbone.history.start();
 }

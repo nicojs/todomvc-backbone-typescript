@@ -75,7 +75,7 @@ module app2 {
 
 				this.$('.filters li a')
 					.removeClass('selected')
-					.filter('[href="#/' + (app.TodoFilter || '') + '"]')
+					.filter('[href="#/' + (app2.todoFilter || '') + '"]')
 					.addClass('selected');
 			} else {
 				this.$main.hide();
