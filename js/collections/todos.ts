@@ -18,7 +18,7 @@ module app2 {
 		}
 
 		// Save all of the todo items under this example's namespace.
-		localStorage: any;
+		localStorage: Backbone.LocalStorage;
 
 		// Filter down the list of all todo items that are finished.
 		completed() {
